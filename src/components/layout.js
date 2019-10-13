@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "@material-ui/core/Container"
-
 import Header from "./header"
+import { Typography } from "@material-ui/core"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,11 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container>
         <main>{children}</main>
-        <footer>© Lalit Marbles Pvt. Ltd{new Date().getFullYear()}</footer>
+        <footer>
+          <Typography variant="caption">
+            © Lalit Marbles Pvt. Ltd{new Date().getFullYear()}
+          </Typography>
+        </footer>
       </Container>
     </>
   )
