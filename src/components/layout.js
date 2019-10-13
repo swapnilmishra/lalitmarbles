@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container>
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}</footer>
+        <footer>© Lalit Marbles Pvt. Ltd{new Date().getFullYear()}</footer>
       </Container>
     </>
   )
