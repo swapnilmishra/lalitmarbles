@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const toSpaceCased = key => {
+const toSpaceUpperCased = key => {
   return key
     .toLowerCase()
     .split("_")
@@ -38,8 +38,7 @@ export const buildTilesData = ({ featuredTiles, imageURLs }) => {
     const url = imageURLs[imgURLKey]
     return {
       img: url,
-      title: toSpaceCased(imgURLKey),
-      author: toSpaceCased(imgURLKey),
+      title: toSpaceUpperCased(imgURLKey),
       featured: featuredTiles.includes(url) ? true : false,
     }
   })

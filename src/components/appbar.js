@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
     color: theme.palette.common.white,
   },
+  productsLink: {
+    color: theme.palette.text.primary,
+  },
   title: {
     flexGrow: 1,
   },
@@ -35,6 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   headerLink: {
     color: theme.palette.common.white,
+    marginRight: 16,
   },
 }))
 
@@ -52,9 +56,9 @@ export default function ButtonAppBar() {
 
   const [open, setOpen] = React.useState(false)
 
-  const HeaderLink = ({ props, children }) => {
+  const HeaderLink = ({ children, ...props }) => {
     return (
-      <Link className={classes.headerLink} {...props}>
+      <Link className={classes.headerLink} {...props} variant="button">
         {children}
       </Link>
     )
@@ -105,21 +109,19 @@ export default function ButtonAppBar() {
               onClose={handleClose}
             >
               <MenuItem onClick={handleClose}>
-                <Link to="/marbles">Marbles</Link>
+                <Link className={classes.productsLink} to="/marbles">
+                  Marbles
+                </Link>
               </MenuItem>
               <MenuItem onClick={handleClose}>
-                <Link to="/granites">Granites</Link>
+                <Link className={classes.productsLink} to="/granites">
+                  Granites
+                </Link>
               </MenuItem>
             </Menu>
-            <Button edge="end" color="inherit">
-              <HeaderLink to="/">infrastructure</HeaderLink>
-            </Button>
-            <Button edge="end" color="inherit">
-              <HeaderLink to="/">about us</HeaderLink>
-            </Button>
-            <Button edge="end" color="inherit">
-              <HeaderLink to="/">contact us</HeaderLink>
-            </Button>
+            <HeaderLink to="/infrastructure">infrastructure</HeaderLink>
+            <HeaderLink to="/aboutus">about us</HeaderLink>
+            <HeaderLink to="/contactus">contact us</HeaderLink>
           </div>
         </Toolbar>
       </AppBar>

@@ -87,7 +87,7 @@ export const GraniteImageURLs = {
   TAN_BROWN,
 }
 
-export const MinesImageURLs = {
+export const InfrastructureImageURLs = {
   MINES1,
   MINES2,
   MINES3,
