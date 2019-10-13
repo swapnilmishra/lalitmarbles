@@ -4,7 +4,7 @@ import Drawer from "@material-ui/core/Drawer"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
-import InboxIcon from "@material-ui/icons/Close"
+import CloseIcon from "@material-ui/icons/Close"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 
 const useStyles = makeStyles({
@@ -36,7 +36,7 @@ export default function TemporaryDrawer(props) {
           onClick={onCloseCallback}
         >
           <ListItemIcon>
-            <InboxIcon className={classes.listIcon} />
+            <CloseIcon className={classes.listIcon} />
           </ListItemIcon>
         </ListItem>
         {["Home", "Products", "About Us", "Contact Us"].map(text => (
