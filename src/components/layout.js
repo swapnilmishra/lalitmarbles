@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Container from "@material-ui/core/Container"
 
 import Header from "./header"
 
@@ -25,10 +26,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <Container>
         <main>{children}</main>
         <footer>© {new Date().getFullYear()}</footer>
-      </div>
+      </Container>
     </>
   )
 }

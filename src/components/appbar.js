@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button"
 import NavDrawer from "./navdrawer"
 import Logo from "../images/logo.png"
 import { Link } from "gatsby-theme-material-ui"
+import Menu from "@material-ui/core/Menu"
+import MenuItem from "@material-ui/core/MenuItem"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,6 +39,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function ButtonAppBar() {
+  const [anchorEl, setAnchorEl] = React.useState(null)
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false)
@@ -69,16 +80,37 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <div>
-            <img
-              src={Logo}
-              alt="Lalit Marbles logo"
-              className={classes.logoImage}
-            />
+            <Link to="/">
+              <img
+                src={Logo}
+                alt="Lalit Marbles logo"
+                className={classes.logoImage}
+              />
+            </Link>
           </div>
           <div className={classes.headerLinkContainer}>
-            <Button>
-              <HeaderLink to="/">products</HeaderLink>
+            <Button
+              className={classes.menuButton}
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={handleClick}
+            >
+              products
             </Button>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>
+                <Link to="/marbles">Marbles</Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link to="/granites">Granites</Link>
+              </MenuItem>
+            </Menu>
             <Button edge="end" color="inherit">
               <HeaderLink to="/">infrastructure</HeaderLink>
             </Button>

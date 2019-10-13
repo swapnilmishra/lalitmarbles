@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
@@ -9,8 +9,8 @@ import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
 
-import ForestGreen from "./../images/marbles/Forest green.jpg"
-import BlackMarquina from "./../images/granites/Black Marquina.jpeg"
+import { Link } from "gatsby-theme-material-ui"
+import { GraniteImageURLs, MarblesImagesURLs } from "./imageurls"
 
 const useStyles = makeStyles({
   card: {
@@ -28,7 +28,7 @@ export default function MediaCard() {
     <Box
       display="flex"
       flexDirection="row"
-      justifyContent="space-between"
+      justifyContent="space-evenly"
       p={1}
       m={1}
       bgcolor="background.paper"
@@ -38,7 +38,7 @@ export default function MediaCard() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={ForestGreen}
+              image={MarblesImagesURLs.FOREST_GREEN}
               title="Forest Green Marble"
             />
             <CardContent>
@@ -53,7 +53,7 @@ export default function MediaCard() {
           </CardActionArea>
           <CardActions>
             <Button size="small" color="primary">
-              View all
+              <Link to="/marbles">View all</Link>
             </Button>
           </CardActions>
         </Card>
@@ -63,7 +63,7 @@ export default function MediaCard() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={BlackMarquina}
+              image={GraniteImageURLs.BLACK_MARQUINA}
               title="Black Marquina Granite"
             />
             <CardContent>
@@ -78,7 +78,7 @@ export default function MediaCard() {
           </CardActionArea>
           <CardActions>
             <Button size="small" color="primary">
-              View all
+              <Link to="/granites">View all</Link>
             </Button>
           </CardActions>
         </Card>

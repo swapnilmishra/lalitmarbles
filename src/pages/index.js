@@ -3,12 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { makeStyles } from "@material-ui/core/styles"
-import AlaskaGold from "./../images/granites/alaska_gold.jpeg"
-import AlaskaRed from "./../images/granites/alaska_red.jpeg"
-import AlaskaWhite from "./../images/granites/alaska_white.jpeg"
 import Slider from "../components/slider"
 import MediaCard from "../components/product-card"
 import Container from "@material-ui/core/Container"
+import { GraniteImageURLs } from "../components/imageurls"
 
 const useStyles = makeStyles({
   slider: {
@@ -25,15 +23,15 @@ const IndexPage = () => {
         className={`image-slider ${classes.slider}`}
         screens={[
           {
-            media: AlaskaGold,
+            media: GraniteImageURLs.ALASKA_GOLD,
             caption: "Alaska Gold",
           },
           {
-            media: AlaskaRed,
+            media: GraniteImageURLs.ALASKA_RED,
             caption: "Alaska Red",
           },
           {
-            media: AlaskaWhite,
+            media: GraniteImageURLs.ALASKA_WHITE,
             caption: "Alaska White",
           },
         ]}
