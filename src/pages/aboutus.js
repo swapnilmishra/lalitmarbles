@@ -31,7 +31,11 @@ const AboutUsPage = () => {
           </Typography>
 
           <Box display="flex" className={classes.container}>
-            <img alt="infrastructure" src={InfrastructureImageURLs.MINES4} />
+            <img
+              alt="infrastructure"
+              src={InfrastructureImageURLs.MINES4}
+              style={{ width: "50%" }}
+            />
             <Typography component="p" className={classes.paragraph}>
               Welcome to Lalit Marbles Company. It was established in 1992 in
               order to cater the ever growing demand of Indian stone, in the
