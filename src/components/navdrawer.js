@@ -6,6 +6,7 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import CloseIcon from "@material-ui/icons/Close"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
+import { Link } from "gatsby-theme-material-ui"
 
 const useStyles = makeStyles({
   fullList: {
@@ -26,6 +27,14 @@ export default function TemporaryDrawer(props) {
   const classes = useStyles()
   const { open, onCloseCallback } = props
 
+  const items = [
+    { name: "Home", url: "/" },
+    { name: "Marbles", url: "/marbles" },
+    { name: "Granites", url: "/granites" },
+    { name: "About Us", url: "/aboutus" },
+    { name: "Contact Us", url: "/contactus" },
+  ]
+
   const fullList = () => (
     <div className={classes.fullList} role="presentation">
       <List>
@@ -39,9 +48,11 @@ export default function TemporaryDrawer(props) {
             <CloseIcon className={classes.listIcon} />
           </ListItemIcon>
         </ListItem>
-        {["Home", "Products", "About Us", "Contact Us"].map(text => (
-          <ListItem button key={text} className={classes.listItem}>
-            <ListItemText primary={text} />
+        {items.map(item => (
+          <ListItem button key={item.name} className={classes.listItem}>
+            <ListItemText>
+              <Link to={item.url}>{item.name}</Link>
+            </ListItemText>
           </ListItem>
         ))}
       </List>
