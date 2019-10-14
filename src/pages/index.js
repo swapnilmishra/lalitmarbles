@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { makeStyles } from "@material-ui/core/styles"
-import Slider from "../components/slider"
+// import Slider from "../components/slider"
 import MediaCard from "../components/product-card"
 import Container from "@material-ui/core/Container"
-import { GraniteImageURLs } from "../components/imageurls"
+// import { GraniteImageURLs } from "../components/imageurls"
 
 const useStyles = makeStyles({
   slider: {
@@ -19,7 +19,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Slider
+      {/* <Slider
         className={`image-slider ${classes.slider}`}
         screens={[
           {
@@ -35,7 +35,7 @@ const IndexPage = () => {
             caption: "Alaska White",
           },
         ]}
-      />
+      /> */}
       <Container>
         <MediaCard />
       </Container>
