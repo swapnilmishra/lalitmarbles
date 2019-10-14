@@ -6,8 +6,9 @@ import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
 import PhoneIcon from "@material-ui/icons/Phone"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
-
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
+
+import "./../css/maps.css"
 
 const useStyles = makeStyles(theme => ({
   headingBlock: {
