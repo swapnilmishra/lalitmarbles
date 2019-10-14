@@ -5,7 +5,8 @@ import { Typography, Box } from "@material-ui/core"
 import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
 import PhoneIcon from "@material-ui/icons/Phone"
-import ContactsIcon from "@material-ui/icons/Contacts"
+import LocationOnIcon from "@material-ui/icons/LocationOn"
+
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
 
 const useStyles = makeStyles(theme => ({
@@ -13,15 +14,10 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3),
   },
   primaryText: {
-    color: theme.palette.text.primary,
-  },
-  root: {
-    marginTop: 50,
-    backgroundColor: theme.palette.background.paper,
     color: theme.palette.text.secondary,
-    "& svg": {
-      margin: theme.spacing(2),
-    },
+  },
+  container: {
+    marginTop: 50,
   },
 }))
 
@@ -30,32 +26,42 @@ const ContactUsPage = () => {
   return (
     <Layout>
       <SEO title="Contact us" />
-      <Paper className={classes.headingBlock}>
-        <Typography variant="h5" component="h3">
-          Contact us
-        </Typography>
+      <Paper className={classes.container}>
+        <div className={classes.headingBlock}>
+          <Typography variant="h5" component="h3">
+            Contact us
+          </Typography>
+        </div>
 
         <Box
           display="flex"
           justifyContent="space-evenly"
-          className={classes.root}
+          className={classes.container}
         >
-          <Box>
-            <ContactsIcon />
+          <Box style={{ textAlign: "center" }}>
+            <LocationOnIcon />
             <Typography className={classes.primaryText}>
-              <p>Mahatma Galli, Rajnagar</p>
-              <p>Rajsamand, Rajasthan, India</p>
+              <Typography variant="subtitle2" component="p">
+                Mahatma Galli, Rajnagar
+              </Typography>
+              <Typography variant="subtitle2" component="p">
+                Rajsamand, Rajasthan, India
+              </Typography>
             </Typography>
           </Box>
-          <Box>
+          <Box style={{ textAlign: "center" }}>
             <PhoneIcon />
-            <Typography className={classes.primaryText}>
+            <Typography
+              className={classes.primaryText}
+              variant="subtitle2"
+              component="p"
+            >
               +91-9000000000
             </Typography>
           </Box>
-          <Box>
+          <Box style={{ textAlign: "center" }}>
             <AlternateEmailIcon />
-            <Typography>
+            <Typography variant="subtitle2" component="p">
               <a
                 className={classes.primaryText}
                 href="mailto: lalitmarbles@gmail"
