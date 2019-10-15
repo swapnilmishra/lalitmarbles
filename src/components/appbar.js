@@ -18,21 +18,15 @@ const useStyles = makeStyles(theme => ({
   productsButton: {
     marginRight: theme.spacing(2),
     color: theme.palette.common.white,
-    [theme.breakpoints.up("md")]: {
-      visibility: "visible",
-    },
-    [theme.breakpoints.down("sm")]: {
-      visibility: "hidden",
-    },
   },
-  menuButton: {
+  menuIcon: {
     marginRight: theme.spacing(2),
     color: theme.palette.common.white,
     [theme.breakpoints.down("sm")]: {
-      visibility: "visible",
+      display: "flex",
     },
     [theme.breakpoints.up("md")]: {
-      visibility: "hidden",
+      display: "none",
     },
   },
   productsLink: {
@@ -52,10 +46,10 @@ const useStyles = makeStyles(theme => ({
   headerLinkContainer: {
     marginLeft: 50,
     [theme.breakpoints.up("md")]: {
-      visibility: "visible",
+      display: "initial",
     },
     [theme.breakpoints.down("sm")]: {
-      visibility: "hidden",
+      display: "none",
     },
   },
   headerLink: {
@@ -97,7 +91,7 @@ export default function ButtonAppBar() {
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <IconButton
-            className={classes.menuButton}
+            className={classes.menuIcon}
             aria-label="menu"
             onClick={() => {
               setOpen(true)
