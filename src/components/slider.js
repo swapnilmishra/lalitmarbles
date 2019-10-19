@@ -1,29 +1,53 @@
 import React from "react"
 import Slide from "react-reveal/Slide"
 import makeCarousel from "react-reveal/makeCarousel"
+import { makeStyles } from "@material-ui/core/styles"
 
-const styles = {
-  position: "relative",
-  overflow: "hidden",
-  width: "100%",
-  height: 400,
-}
+const useStyles = makeStyles(theme => ({
+  sliderRoot: {
+    position: "relative",
+    overflow: "hidden",
+    width: "100%",
+  },
+  sliderCommon: {
+    [theme.breakpoints.down("sm")]: {
+      height: 300,
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: 500,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 700,
+    },
+  },
+  sliderImage: {
+    width: "100%",
+    margin: "0 auto",
+  },
+}))
+
 const Container = ({ children }) => {
-  return <div style={styles}>{children}</div>
+  const classes = useStyles()
+  return (
+    <div className={`${classes.sliderRoot} ${classes.sliderCommon}`}>
+      {children}
+    </div>
+  )
 }
 
 const CarouselUI = ({ children }) => <Container> {children} </Container>
 const Carousel = makeCarousel(CarouselUI)
 
-export default ({ screens }) => {
+export default ({ images, waitTime = 3000 }) => {
+  const classes = useStyles()
   return (
-    <Carousel defaultWait={2000} /*wait for 1000 milliseconds*/>
-      {screens.map((screen, index) => (
-        <Slide right>
+    <Carousel defaultWait={waitTime} maxTurns={Infinity}>
+      {images.map((imageURL, index) => (
+        <Slide right key={index}>
           <img
-            src={screen.media}
-            key={index}
-            style={{ width: "100vw", margin: "0 auto" }}
+            src={imageURL}
+            alt={imageURL}
+            className={`${classes.sliderImage}  ${classes.sliderCommon}`}
           />
         </Slide>
       ))}

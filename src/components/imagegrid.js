@@ -1,30 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import GridList from "@material-ui/core/GridList"
-import GridListTile from "@material-ui/core/GridListTile"
-import GridListTileBar from "@material-ui/core/GridListTileBar"
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    transform: "translateZ(0)",
-    backgroundColor: theme.palette.common.black,
-  },
-  titleBar: {
-    background:
-      "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-      "rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)",
-  },
-  icon: {
-    color: "white",
-  },
-}))
+import Box from "@material-ui/core/Box"
+import { Typography } from "@material-ui/core"
 
 const toSpaceUpperCased = key => {
   return key
@@ -33,39 +10,59 @@ const toSpaceUpperCased = key => {
     .join(" ")
 }
 
-export const buildTilesData = ({ featuredTiles, imageURLs }) => {
+export const buildTilesData = ({ imageURLs }) => {
   return Object.keys(imageURLs).map(imgURLKey => {
     const url = imageURLs[imgURLKey]
     return {
       img: url,
       title: toSpaceUpperCased(imgURLKey),
-      featured: featuredTiles.includes(url) ? true : false,
     }
   })
 }
 
-export default ({ tileData }) => {
-  const classes = useStyles()
+const useStyles = makeStyles(theme => {
+  return {
+    root: {
+      marginTop: 20,
+      marginLeft: 20,
+      marginRight: 20,
+      textAlign: "center",
+    },
+    image: {
+      width: 150,
+      height: 150,
+      [theme.breakpoints.down("xs")]: {
+        width: 250,
+        height: 250,
+      },
+    },
+  }
+})
 
+const ImageGrid = ({ tileData, shouldShowLabel = true }) => {
+  const classes = useStyles()
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-        {tileData.map(tile => (
-          <GridListTile
-            key={tile.img}
-            cols={tile.featured ? 2 : 1}
-            rows={tile.featured ? 2 : 1}
-          >
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+    <Box
+      display="flex"
+      flexDirection="row"
+      flexWrap="wrap"
+      justifyContent="space-evenly"
+      p={1}
+      m={1}
+      bgcolor="background.paper"
+    >
+      {tileData.map(tile => (
+        <div className={classes.root} key={tile.title}>
+          <img src={tile.img} alt={tile.title} className={classes.image} />
+          {shouldShowLabel && (
+            <Typography variant="overline" component="h6">
+              {tile.title}
+            </Typography>
+          )}
+        </div>
+      ))}
+    </Box>
   )
 }
+
+export default ImageGrid

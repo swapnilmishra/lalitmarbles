@@ -1,24 +1,24 @@
 import ARNA_BROWN from "./../images/marbles/arna_brown_1.jpg"
-import ARNA_CLASSIC1 from "./../images/marbles/arna_classic_1.jpg"
-import ARNA_CLASSIC2 from "./../images/marbles/arna_classic_2.jpg"
+import ARNA_CLASSIC_1 from "./../images/marbles/arna_classic_1.jpg"
+import ARNA_CLASSIC_2 from "./../images/marbles/arna_classic_2.jpg"
+import ARNA_CLASSIC_3 from "./../images/marbles/arna_white.jpg"
 import ARNA_PLAIN_1 from "./../images/marbles/arna_plain_1.png"
 import ARNA_PLAIN_2 from "./../images/marbles/arna_plain_2.png"
 import ARNA_SIDE_FACED from "./../images/marbles/arna_side_faced.jpg"
-import ARNA_WHITE from "./../images/marbles/arna_white.jpg"
 import DUNGRI from "./../images/marbles/dungri.jpg"
 import FANTASY_BROWN from "./../images/marbles/fantasy_brown.jpg"
 import FOREST_GREEN from "./../images/marbles/forest_green.jpg"
 import INDIAN_STATUARIO from "./../images/marbles/indian_statuario.jpg"
-import JHANKHAR_CROSS from "./../images/marbles/jhanjhar_cross.jpg"
-import JHANKHAR_CROSS1 from "./../images/marbles/jhanjhar_cross_1.jpg"
-import JhankharStraight from "./../images/marbles/jhanjhar_straight.jpg"
+import JHANJHAR_CROSS from "./../images/marbles/jhanjhar_cross.jpg"
+import JHANJHAR_CROSS_1 from "./../images/marbles/jhanjhar_cross_1.jpg"
+import JHANJHAR_STRAIGHT from "./../images/marbles/jhanjhar_straight.jpg"
 import MERCURY_BLACK from "./../images/marbles/mercury_black.jpg"
 import MERCURY_WHITE_1 from "./../images/marbles/mercury_white_1.jpg"
 import SPIDER_GREEN from "./../images/marbles/spider_green.jpg"
 import MERCURY_WHITE_2 from "./../images/marbles/mercury_white_2.jpg"
 import MORCHANA_BROWN from "./../images/marbles/morchana_brown.jpg"
 import NIZARNA_BROWN from "./../images/marbles/nizarna_brown.jpg"
-import RIVE_GREEN from "./../images/marbles/rive_green.jpg"
+import RIVER_GREEN from "./../images/marbles/rive_green.jpg"
 import TALAI_WHITE from "./../images/marbles/talai_white.jpg"
 import VANNI_BROWN_1 from "./../images/marbles/vanni_brown_1.jpg"
 import UDAIPUR_PINK from "./../images/marbles/udaipur_pink.jpg"
@@ -33,7 +33,7 @@ import CAT_EYE from "./../images/granites/cat_eye.jpg"
 import CHIMA_PINK from "./../images/granites/chima_pink.png"
 import IMPERIAL_RED from "./../images/granites/imperial_red.jpg"
 import P_WHITE from "./../images/granites/p_white.jpg"
-import R_BLACK from "./../images/granites/r_black.jpg"
+import RAJASTHAN_BLACK from "./../images/granites/r_black.jpg"
 import TAN_BROWN from "./../images/granites/tan_brown.jpg"
 
 import MINES1 from "./../images/mines/mines1.jpg"
@@ -45,30 +45,37 @@ import MINES6 from "./../images/mines/mines6.jpg"
 import MINES7 from "./../images/mines/mines7.jpg"
 import MINES8 from "./../images/mines/mines8.jpg"
 
+import SLIDESHOW1 from "./../images/slideshow/factory_1.jpg"
+import SLIDESHOW2 from "./../images/slideshow/factory_2.jpg"
+import SLIDESHOW3 from "./../images/slideshow/factory_3.jpg"
+import SLIDESHOW4 from "./../images/slideshow/factory_4.jpg"
+import SLIDESHOW5 from "./../images/slideshow/factory_5.jpg"
+import SLIDESHOW6 from "./../images/slideshow/factory_6.jpg"
+
 export const MarblesImagesURLs = {
   ARNA_BROWN,
-  ARNA_CLASSIC1,
-  ARNA_CLASSIC2,
+  ARNA_CLASSIC_1,
+  ARNA_CLASSIC_2,
   ARNA_PLAIN_1,
   ARNA_PLAIN_2,
   ARNA_SIDE_FACED,
-  ARNA_WHITE,
+  ARNA_CLASSIC_3,
   DUNGRI,
   FANTASY_BROWN,
-  FOREST_GREEN,
   INDIAN_STATUARIO,
-  JHANKHAR_CROSS,
-  JHANKHAR_CROSS1,
-  JhankharStraight,
-  UDAIPUR_PINK,
+  JHANJHAR_CROSS,
+  JHANJHAR_CROSS_1,
+  JHANJHAR_STRAIGHT,
   MERCURY_BLACK,
   MERCURY_WHITE_1,
   MERCURY_WHITE_2,
   MORCHANA_BROWN,
   NIZARNA_BROWN,
-  RIVE_GREEN,
-  SPIDER_GREEN,
   TALAI_WHITE,
+  FOREST_GREEN,
+  RIVER_GREEN,
+  SPIDER_GREEN,
+  UDAIPUR_PINK,
   VANNI_BROWN_1,
   VANNI_BROWN_2,
   VANNI_BROWN_3,
@@ -83,7 +90,7 @@ export const GraniteImageURLs = {
   CHIMA_PINK,
   IMPERIAL_RED,
   P_WHITE,
-  R_BLACK,
+  RAJASTHAN_BLACK,
   TAN_BROWN,
 }
 
@@ -96,4 +103,13 @@ export const InfrastructureImageURLs = {
   MINES6,
   MINES7,
   MINES8,
+}
+
+export const SlideshowImageURLs = {
+  SLIDESHOW1,
+  SLIDESHOW2,
+  SLIDESHOW3,
+  SLIDESHOW4,
+  SLIDESHOW5,
+  SLIDESHOW6,
 }

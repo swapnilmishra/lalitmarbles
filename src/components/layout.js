@@ -41,16 +41,20 @@ const Layout = ({ children, fullWidthContent }) => {
   return (
     <MuiThemeProvider theme={theme}>
       <Fragment>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {fullWidthContent && renderFullWidthContent(fullWidthContent)}
-        <Container>
-          <main>{children}</main>
-          <footer>
+        <div style={{ minHeight: "calc(100vh - 20px)" }}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {fullWidthContent && renderFullWidthContent(fullWidthContent)}
+          <Container>
+            <main>{children}</main>
+          </Container>
+        </div>
+        <footer>
+          <Container>
             <Typography variant="caption">
               © Lalit Marbles Pvt. Ltd {new Date().getFullYear()}
             </Typography>
-          </footer>
-        </Container>
+          </Container>
+        </footer>
       </Fragment>
     </MuiThemeProvider>
   )

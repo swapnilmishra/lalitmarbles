@@ -37,6 +37,7 @@ const InfrastructurePage = () => {
       </Container>
       <Container>
         <ImageGrid
+          shouldShowLabel={false}
           tileData={buildTilesData({
             featuredTiles,
             imageURLs: InfrastructureImageURLs,

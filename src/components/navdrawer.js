@@ -31,6 +31,7 @@ export default function TemporaryDrawer(props) {
     { name: "Home", url: "/" },
     { name: "Marbles", url: "/marbles" },
     { name: "Granites", url: "/granites" },
+    { name: "Infrastructure", url: "/infrastructure" },
     { name: "About Us", url: "/aboutus" },
     { name: "Contact Us", url: "/contactus" },
   ]

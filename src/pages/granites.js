@@ -8,8 +8,6 @@ import { Typography } from "@material-ui/core"
 import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
 
-const featuredTiles = [GraniteImageURLs.CAT_EYE, GraniteImageURLs.P_WHITE]
-
 const useStyles = makeStyles(theme => ({
   container: {
     marginTop: 50,
@@ -35,18 +33,12 @@ const GranitesPage = () => {
             white, pink, or gray in color, depending on their mineralogy. The
             word "granite" comes from the Latin granum, a grain, in reference to
             the coarse-grained structure of such a holocrystalline rock.
-            Strictly speaking, granite is an igneous rock with between 20% and
-            60% quartz by volume, and at least 35% of the total feldspar
-            consisting of alkali feldspar, although commonly the term "granite"
-            is used to refer to a wider range of coarse-grained igneous rocks
-            containing quartz and feldspar.
           </Typography>
         </Paper>
       </Container>
       <Container className={classes.container}>
         <ImageGrid
           tileData={buildTilesData({
-            featuredTiles,
             imageURLs: GraniteImageURLs,
           })}
         />
