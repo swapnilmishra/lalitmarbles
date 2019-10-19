@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       marginTop: 20,
     },
+    [theme.breakpoints.between("xs", "sm")]: {
+      maxWidth: 300,
+    },
   },
   media: {
     height: 140,
