@@ -2567,11 +2567,6 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bulma@^0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
-  integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
-
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -10069,13 +10064,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-awesome-slider@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-2.0.0.tgz#bbaa4838e66128619cac1ae7dd78f574b279fc82"
-  integrity sha512-vl4DUhhhAqZR0ZmZlSCyue6UKxaSGz0E8UUR9XHf0Q+JzX8bn6c1gcAXrYiE8V6MB8wjS63dj9VKwQLvTG2vzQ==
-  dependencies:
-    web-animation-club "^0.4.0"
-
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -10168,6 +10156,13 @@ react-reconciler@^0.21.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.15.0"
+
+react-reveal@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-reveal/-/react-reveal-1.2.2.tgz#f47fbc44debc4c185ae2163a215a9e822c7adfef"
+  integrity sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-side-effect@^1.1.0:
   version "1.1.5"
@@ -12331,11 +12326,6 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
-
-web-animation-club@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/web-animation-club/-/web-animation-club-0.4.0.tgz#038f7e47db7ce4d8c5acce1e947a89dd19d5222c"
-  integrity sha512-VjGXZUdtKngjaSS+gRg/HA2Arbn2CJYq6uRJn/Wd7rDWvQ60l0d28bij5S+mghGNgVf1vv5U573vNJEmiiRVTw==
 
 webpack-dev-middleware@^3.7.2:
   version "3.7.2"
