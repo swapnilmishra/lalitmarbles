@@ -5,14 +5,29 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "@material-ui/core/Container"
 import Header from "./header"
 import { Typography } from "@material-ui/core"
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
 
-const Layout = ({ children }) => {
+const theme = createMuiTheme({
+  // palette: {
+  //   primary: purple,
+  //   secondary: green,
+  // },
+  // status: {
+  //   danger: "orange",
+  // },
+})
+
+const fullWidthStyle = {
+  width: "100%",
+}
+
+const Layout = ({ children, fullWidthContent }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,18 +39,25 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        <main>{children}</main>
-        <footer>
-          <Typography variant="caption">
-            © Lalit Marbles Pvt. Ltd{new Date().getFullYear()}
-          </Typography>
-        </footer>
-      </Container>
-    </>
+    <MuiThemeProvider theme={theme}>
+      <Fragment>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        {fullWidthContent && renderFullWidthContent(fullWidthContent)}
+        <Container>
+          <main>{children}</main>
+          <footer>
+            <Typography variant="caption">
+              © Lalit Marbles Pvt. Ltd {new Date().getFullYear()}
+            </Typography>
+          </footer>
+        </Container>
+      </Fragment>
+    </MuiThemeProvider>
   )
+}
+
+const renderFullWidthContent = content => {
+  return <div style={fullWidthStyle}>{content}</div>
 }
 
 Layout.propTypes = {

@@ -29,12 +29,15 @@ const AboutUsPage = () => {
           <Typography variant="h5" component="h3">
             About us
           </Typography>
-
-          <Box display="flex" className={classes.container}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            className={classes.container}
+          >
             <img
               alt="infrastructure"
               src={InfrastructureImageURLs.MINES4}
-              style={{ width: "50%" }}
+              style={{ width: "100%" }}
             />
             <Typography component="p" className={classes.paragraph}>
               Welcome to Lalit Marbles Company. It was established in 1992 in

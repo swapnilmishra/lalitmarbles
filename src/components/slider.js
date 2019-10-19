@@ -1,38 +1,32 @@
-import React, { Component } from "react"
-import AwesomeSlider from "react-awesome-slider"
-import "react-awesome-slider/dist/styles.css"
-import "./../css/slider-override.css"
+import React from "react"
+import Slide from "react-reveal/Slide"
+import makeCarousel from "react-reveal/makeCarousel"
 
-const SliderHOC = WrappedComponent => {
-  return class extends Component {
-    renderScreens() {
-      return this.props.screens.map((screen, index) => (
-        <div
-          key={`${this.props.name}-screen-${index}`}
-          data-src={screen.media}
-          style={{
-            backgroundColor: screen.backgroundColor,
-          }}
-        >
-          <div className="image-slider__content caption">
-            <p>{screen.caption}</p>
-          </div>
-        </div>
-      ))
-    }
-
-    render() {
-      return (
-        <WrappedComponent {...this.props}>
-          {this.renderScreens()}
-        </WrappedComponent>
-      )
-    }
-  }
+const styles = {
+  position: "relative",
+  overflow: "hidden",
+  width: "100%",
+  height: 400,
+}
+const Container = ({ children }) => {
+  return <div style={styles}>{children}</div>
 }
 
-const CaptionedComponent = SliderHOC(AwesomeSlider)
+const CarouselUI = ({ children }) => <Container> {children} </Container>
+const Carousel = makeCarousel(CarouselUI)
 
-export default function(props) {
-  return <CaptionedComponent transitionDelay={100} {...props} />
+export default ({ screens }) => {
+  return (
+    <Carousel defaultWait={2000} /*wait for 1000 milliseconds*/>
+      {screens.map((screen, index) => (
+        <Slide right>
+          <img
+            src={screen.media}
+            key={index}
+            style={{ width: "100vw", margin: "0 auto" }}
+          />
+        </Slide>
+      ))}
+    </Carousel>
+  )
 }
