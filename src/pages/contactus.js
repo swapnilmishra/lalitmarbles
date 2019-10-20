@@ -36,7 +36,7 @@ const ContactUsPage = () => {
         {useAddress({ classes })}
         <iframe
           title="lalit marbles embedded map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231213.55598453563!2d73.72040115391121!3d25.111614961923532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39681525dc5db9a3%3A0x963a8a887df4ff99!2sLalit%20Marbles%20Pvt%20Ltd!5e0!3m2!1sen!2sde!4v1571554491186!5m2!1sen!2sde"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.391993589541!2d73.85313131503112!3d25.0207678449758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzE0LjgiTiA3M8KwNTEnMTkuMiJF!5e0!3m2!1sen!2sde!4v1571569154389!5m2!1sen!2sde"
           className="maps-el"
           style={{ frameborder: 0, border: 0 }}
         ></iframe>
@@ -64,6 +64,9 @@ const useAddress = ({ classes }) => {
         <LocationOnIcon />
         <Typography className={classes.primaryText}>
           <Typography variant="subtitle2" component="p">
+            Lalit marbles
+          </Typography>
+          <Typography variant="subtitle2" component="p">
             N.H.8 Village. Piparda, Rajsamand, Rajasthan
           </Typography>
         </Typography>
@@ -89,7 +92,7 @@ const useAddress = ({ classes }) => {
         <AlternateEmailIcon />
         <Typography variant="subtitle2" component="p">
           <a className={classes.primaryText} href="mailto: lalitmarbles@gmail">
-            lalitmarbles@gmail.com
+            info@lalitmarbles.com
           </a>
         </Typography>
       </Box>
