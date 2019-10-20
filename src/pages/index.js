@@ -11,7 +11,9 @@ const IndexPage = () => {
       fullWidthContent={<Slider images={Object.values(SlideshowImageURLs)} />}
     >
       <SEO title="Home" />
-      <ProductCard />
+      <div style={{ marginTop: 50 }}>
+        <ProductCard />
+      </div>
     </Layout>
   )
 }

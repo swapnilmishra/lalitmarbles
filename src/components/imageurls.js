@@ -45,7 +45,7 @@ import MINES6 from "./../images/mines/mines6.jpg"
 import MINES7 from "./../images/mines/mines7.jpg"
 import MINES8 from "./../images/mines/mines8.jpg"
 
-import SLIDESHOW1 from "./../images/slideshow/slideshow_1.jpg"
+// import SLIDESHOW1 from "./../images/slideshow/slideshow_1.jpg"
 import SLIDESHOW2 from "./../images/slideshow/slideshow_2.jpg"
 import SLIDESHOW3 from "./../images/slideshow/slideshow_3.jpg"
 import SLIDESHOW4 from "./../images/slideshow/slideshow_4.jpg"
@@ -122,7 +122,7 @@ export const FactoryImageURLs = {
 }
 
 export const SlideshowImageURLs = {
-  SLIDESHOW1,
+  // SLIDESHOW1,
   SLIDESHOW2,
   SLIDESHOW3,
   SLIDESHOW4,
