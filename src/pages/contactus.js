@@ -51,6 +51,7 @@ const useAddress = ({ classes }) => {
   const addressBlockStyle = {
     textAlign: "center",
     marginTop: matchesMobile ? 20 : 0,
+    padding: theme.spacing(1),
   }
   return (
     <Box
