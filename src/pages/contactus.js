@@ -53,14 +53,14 @@ const useAddress = ({ classes }) => {
     marginTop: matchesMobile ? 20 : 0,
     padding: theme.spacing(1),
   }
+  const noMargin = { marginTop: 0 }
   return (
     <Box
       display="flex"
       flexDirection={matchesMobile ? "column" : "row"}
       justifyContent="space-evenly"
-      className={classes.container}
     >
-      <Box style={addressBlockStyle}>
+      <Box style={{ ...addressBlockStyle, ...noMargin }}>
         <LocationOnIcon />
         <Typography className={classes.primaryText}>
           <Typography variant="subtitle2" component="p">
