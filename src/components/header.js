@@ -5,12 +5,9 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
-import Button from "@material-ui/core/Button"
 import NavDrawer from "./navdrawer"
 import Logo from "../images/logo.png"
 import { Link } from "gatsby-theme-material-ui"
-import Menu from "@material-ui/core/Menu"
-import MenuItem from "@material-ui/core/MenuItem"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,17 +57,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function NavBar() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
   const classes = useStyles()
-
   const [open, setOpen] = React.useState(false)
 
   const HeaderLink = ({ children, ...props }) => {
@@ -111,32 +98,8 @@ function NavBar() {
           </div>
           <div className={classes.headerLinkContainer}>
             <HeaderLink to="/">home</HeaderLink>
-            <Button
-              className={classes.productsButton}
-              aria-controls="simple-menu"
-              aria-haspopup="true"
-              onClick={handleClick}
-            >
-              products
-            </Button>
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose}>
-                <Link className={classes.productsLink} to="/marbles">
-                  Marbles
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link className={classes.productsLink} to="/granites">
-                  Granites
-                </Link>
-              </MenuItem>
-            </Menu>
+            <HeaderLink to="/marbles">marbles</HeaderLink>
+            <HeaderLink to="/granites">granites</HeaderLink>
             <HeaderLink to="/infrastructure">infrastructure</HeaderLink>
             <HeaderLink to="/aboutus">about us</HeaderLink>
             <HeaderLink to="/contactus">contact us</HeaderLink>
