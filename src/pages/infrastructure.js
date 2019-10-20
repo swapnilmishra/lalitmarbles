@@ -37,7 +37,7 @@ const InfrastructurePage = () => {
       <SEO title="Infrastructure" />
       <Container className={classes.container}>
         <Paper className={classes.headingBlock}>
-          <Typography variant="h5" component="h3">
+          <Typography variant="h5" component="h1">
             Quarry
           </Typography>
           <Typography component="p">
@@ -57,7 +57,7 @@ const InfrastructurePage = () => {
 
       <Container className={classes.container}>
         <Paper className={classes.headingBlock}>
-          <Typography variant="h5" component="h3">
+          <Typography variant="h5" component="h1">
             Processing Unit
           </Typography>
           <Typography component="p">

@@ -24,10 +24,10 @@ const GranitesPage = () => {
       <SEO title="Marbles" />
       <Container className={classes.container}>
         <Paper className={classes.headingBlock}>
-          <Typography variant="h5" component="h3">
+          <Typography variant="h5" component="h1">
             Granites
           </Typography>
-          <Typography component="p">
+          <Typography component="p" variant="body2">
             Granite is a common type of felsic intrusive igneous rock that is
             granular and phaneritic in texture. Granites can be predominantly
             white, pink, or gray in color, depending on their mineralogy. The

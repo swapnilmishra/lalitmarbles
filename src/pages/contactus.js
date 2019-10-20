@@ -29,7 +29,7 @@ const ContactUsPage = () => {
       <SEO title="Contact us" />
       <Paper className={classes.container}>
         <div className={classes.headingBlock}>
-          <Typography variant="h5" component="h3">
+          <Typography variant="h5" component="h1">
             Contact us
           </Typography>
         </div>

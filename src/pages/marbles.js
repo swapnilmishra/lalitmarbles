@@ -24,15 +24,15 @@ const MarblesPage = () => {
       <SEO title="Marbles" />
       <Container className={classes.container}>
         <Paper className={classes.headingBlock}>
-          <Typography variant="h5" component="h3">
+          <Typography variant="h5" component="h1">
             Marbles
           </Typography>
-          <Typography component="p">
-            Marble is a metamorphic rock composed of recrystallized carbonate
-            minerals, most commonly calcite or dolomite. Marble is typically not
-            foliated, although there are exceptions. In geology, the term
-            "marble" refers to metamorphosed limestone, but its use in
-            stonemasonry more broadly encompasses unmetamorphosed limestone.
+          <Typography component="p" variant="body2">
+            Traditionally, Marble is used for building tombs, temples and
+            palaces. For a time it was considered as Royal Stone. It is,
+            however, now used in hotels and homes too. There are many varieties
+            of marbles produced in India such as Arna, Dungri, Jhanjar, Talai,
+            Udaipur pink.
           </Typography>
         </Paper>
       </Container>
