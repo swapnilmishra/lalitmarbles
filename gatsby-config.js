@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Lalit Marbles`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Home to India's best marbles`,
+    author: `@swapnilmishra`,
   },
   plugins: [
     `gatsby-theme-material-ui`,
