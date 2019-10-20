@@ -14,9 +14,6 @@ const useStyles = makeStyles(theme => ({
   headingBlock: {
     padding: theme.spacing(3),
   },
-  paragraph: {
-    paddingLeft: theme.spacing(3),
-  },
 }))
 
 const AboutUsPage = () => {
@@ -34,17 +31,17 @@ const AboutUsPage = () => {
             flexDirection="column"
             className={classes.container}
           >
-            <img
-              alt="infrastructure"
-              src={InfrastructureImageURLs.MINES4}
-              style={{ width: "100%" }}
-            />
-            <Typography component="p" className={classes.paragraph}>
+            <Typography variant="body2" component="p">
               Welcome to Lalit Marbles Company. It was established in 1992 in
               order to cater the ever growing demand of Indian stone, in the
               global market! Headquartered in Rajsamand, Rajasthan it is leading
               company bringing forth quality marble to all over India and World.
             </Typography>
+            <img
+              alt="infrastructure"
+              src={InfrastructureImageURLs.MINES4}
+              style={{ width: "100%", marginTop: 50 }}
+            />
           </Box>
         </Paper>
       </Container>

@@ -39,8 +39,13 @@ const useStyles = makeStyles(theme => {
   }
 })
 
-const ImageGrid = ({ tileData, shouldShowLabel = true }) => {
-  const classes = useStyles()
+const ImageGrid = ({
+  tileData,
+  shouldShowLabel = true,
+  overrideClasses = {},
+}) => {
+  let classes = useStyles()
+  classes = { ...classes, ...overrideClasses }
   return (
     <Box
       display="flex"

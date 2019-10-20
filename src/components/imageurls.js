@@ -45,12 +45,19 @@ import MINES6 from "./../images/mines/mines6.jpg"
 import MINES7 from "./../images/mines/mines7.jpg"
 import MINES8 from "./../images/mines/mines8.jpg"
 
-import SLIDESHOW1 from "./../images/slideshow/factory_1.jpg"
-import SLIDESHOW2 from "./../images/slideshow/factory_2.jpg"
-import SLIDESHOW3 from "./../images/slideshow/factory_3.jpg"
-import SLIDESHOW4 from "./../images/slideshow/factory_4.jpg"
-import SLIDESHOW5 from "./../images/slideshow/factory_5.jpg"
-import SLIDESHOW6 from "./../images/slideshow/factory_6.jpg"
+import SLIDESHOW1 from "./../images/slideshow/slideshow_1.jpg"
+import SLIDESHOW2 from "./../images/slideshow/slideshow_2.jpg"
+import SLIDESHOW3 from "./../images/slideshow/slideshow_3.jpg"
+import SLIDESHOW4 from "./../images/slideshow/slideshow_4.jpg"
+import SLIDESHOW5 from "./../images/slideshow/slideshow_5.jpg"
+import SLIDESHOW6 from "./../images/slideshow/slideshow_6.jpg"
+
+import FACTORY1 from "./../images/factory/factory_1.jpg"
+import FACTORY2 from "./../images/factory/factory_2.jpg"
+import FACTORY3 from "./../images/factory/factory_3.jpg"
+import FACTORY4 from "./../images/factory/factory_4.jpg"
+import FACTORY5 from "./../images/factory/factory_5.jpg"
+import FACTORY6 from "./../images/factory/factory_6.jpg"
 
 export const MarblesImagesURLs = {
   ARNA_BROWN,
@@ -103,6 +110,15 @@ export const InfrastructureImageURLs = {
   MINES6,
   MINES7,
   MINES8,
+}
+
+export const FactoryImageURLs = {
+  FACTORY1,
+  FACTORY2,
+  FACTORY3,
+  FACTORY4,
+  FACTORY5,
+  FACTORY6,
 }
 
 export const SlideshowImageURLs = {
